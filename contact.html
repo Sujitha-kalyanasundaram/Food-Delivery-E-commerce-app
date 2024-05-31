@@ -1,0 +1,178 @@
+{% load static %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">DelishDrop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary" href="/menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary" href="/viewcart">View Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary" href="/logout">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <style>
+        body {
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+     
+        }
+
+        .contact-form {
+            padding: 100px;
+            margin: 0 auto;
+            max-width: 1200px;
+            background-color: rgb(169, 163, 169);
+        }
+
+        .contactus,
+        .contact-form h2 {
+            text-align: center;
+            text-size-adjust: 100px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .contactus,
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #0dac30;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #1ac840;
+        }
+
+        .contactus {
+            max-width: 1200px;
+            margin: 20px auto; /* Center the container horizontally */
+            padding: 60px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contactus h1 {
+            text-align: center;
+            margin-bottom: 70px;
+            font-size: 36px; /* Adjust font size as needed */
+        }
+
+        .contactus h3 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 24px; /* Adjust font size as needed */
+        }
+
+        .contactus ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contactus li {
+            margin-bottom: 10px;
+            display: flex; /* Align items in a row */
+            align-items: center; /* Vertically center items */
+        }
+
+        .contactus li img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        /* New CSS for layout */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px; /* Adjust max-width as needed */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+        .contact-form,
+        .contactus {
+            flex: 1;
+            margin: 0 auto;
+        }
+        .slogan{
+            text-align: center;
+            color: purple;
+        }
+    </style>
+   <!-- Contact form -->
+   <div class="slogan">
+    <p>"Where Flavor Meets Connection: Savor Every Moment with Us!"</p>
+   </div>
+<div class="container">
+   
+    <section class="contact-form">
+        <h2>Send US a Message</h2>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        
+    </section>
+    <section class="contactus">
+        <h1><b><p>Contact Us</p></b></h1>
+        <h3><p>We're open for any suggestion or just to have a chat</p></h3>
+        <ul>
+            <li><img src="https://tse1.mm.bing.net/th?id=OIP.LYWY4V7NG6LQf6J9nqNtCQAAAA&pid=Api&P=0&h=180" alt=""> Address: No. 956, DelishDrop, Mount Road Anna Salai, Chennai, Tamil Nadu</li>
+            <li><img src="https://tse2.mm.bing.net/th?id=OIP.HerOTZG2ezGhaZecOPqQIQHaHa&pid=Api&P=0&h=180" alt=""> Phone: +91 XXXXXXXXXX</li>
+            <li><img src="https://tse3.mm.bing.net/th?id=OIP.rdiiRa8wplSKN0H0w8JsVwHaHf&pid=Api&P=0&h=180" alt=""> <a href="mailto:ksujiths377@gmail.com">Email: ksujiths377@gmail.com</a></li>
+            <li><img src="https://tse3.mm.bing.net/th?id=OIP.xkZoYbIt45PWqxHWCNpIKAHaJU&pid=Api&P=0&h=180" alt=""> <a href="https://www.delishdrop.com">Website: Delish Drop.com</a></li>
+        </ul>
+    </section>
+
+</div>

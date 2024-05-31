@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About DelishDrop</title>
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <style>
+        /* CSS for layout */
+        body {
+            overflow-x: hidden;
+        }
+        .container1 {
+            align-items: top;
+            text-align: right;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+        .image {
+            flex: 1;
+            padding: 20px;
+        }
+        .secondary {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        /* Styles for header button */
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">DelishDrop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary" href="/menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary" href="/viewcart">View Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary" href="/logout">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container1">
+        <div class="row mt-5">
+        </div>
+    <div class="container">
+        <div class="text">
+            <div class="secondary">About Us</div>
+            <h2 class="primary">150+</h2>
+            <h2 class="tertiary">Our Delicious Food</h2>
+            <h5><p>
+                "Imagine a world where your favorite meals from the best local restaurants are just a few taps away.
+                 With our innovative Delish Drop app, we bring the culinary delights of your city straight to your doorstep. 
+                 Whether you're craving Briyani, authentic ethnic cuisine, or healthy Meals, our app connects you with 
+                 a diverse range of dining options tailored to your tastes and dietary preferences.
+                 Say goodbye to long lines and tedious meal prep with our user-friendly interface and 
+                 seamless ordering process, satisfying your cravings has never been easier. 
+                 From busy weeknights to lazy weekends, our food delivery app is your go-to solution for convenient, 
+                 delicious dining experiences."
+            </p></h5>
+        </div>
+        <div class="image">
+            <img src="https://raw.githubusercontent.com/programmercloud/foodlover/main/img/about.png" alt="" >
+        </div>
+    </div>
+</body>
+</html>
